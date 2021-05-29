@@ -14,31 +14,52 @@ let [comp_score, user_score] = [0,0];
 let gameRules = {
     Rock: {
         Rock: 'draw',
-        Scissors: 'win',
-        Paper: 'lose'
+        Scissors: 'lose',
+        Paper: 'win',
+        Spock: 'win',
+        Lizard: 'lose'
     },
     Paper: {
         Paper: 'draw',
-        Rock: 'win',
-        Scissors: 'lose'
+        Rock: 'lose',
+        Scissors: 'win',
+        Lizard: 'win',
+        Spock: 'lose'
     },
     Scissors: {
         Scissors: 'draw',
+        Paper: 'lose',
+        Rock: 'win',
+        Lizard: 'lose',
+        Spock: 'win'
+    },
+    Lizard: {
+        Scissors: 'win',
+        Paper: 'lose',
+        Rock: 'win',
+        Lizard: 'draw',
+        Spock: 'lose'
+    },
+    Spock: {
+        Scissors: 'lose',
         Paper: 'win',
-        Rock: 'lose'
+        Rock: 'lose',
+        Lizard: 'win',
+        Spock: 'draw'
     }
 }
 
 function clicked(input) {
-    let choices = ["Rock","Paper","Scissors"];
-    let randomNumber = Math.trunc(Math.random() * 3); //trunc removes the fraction part of any number and gives the int value
+    let choices = ["Rock", "Paper", "Scissors", "Lizard", "Spock"];
+    let randomNumber = Math.trunc(Math.random() * 5); //trunc removes the fraction part of any number and gives the int value
     let comp_choice = choices[randomNumber];
     
+    console.log(randomNumber);
     document.getElementById("userChoice").innerHTML = `Computer choose <span>${comp_choice.toUpperCase()}</span>`;   //innerHtml is use when we use to replace any tag etc. but innertext is used to update or change the content of the tag.
     document.getElementById("compChoice").innerHTML = `You choose <span>${input.toUpperCase()}</span>`;
 
-
-    switch(gameRules[input][comp_choice]) {
+    console.log('input', input, 'comp- choice', comp_choice);
+    switch(gameRules[comp_choice][input]) {
         case 'win':
             result.innerText = `You win`;
             result.style.cssText = "background-color: rgb(128, 247, 128)";
