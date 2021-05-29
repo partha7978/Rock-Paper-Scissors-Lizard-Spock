@@ -8,6 +8,9 @@
 //It should update the score.
 
 const result = document.getElementById("result");
+let [comp_score, user_score] = [0,0];
+
+
 let gameRules = {
     Rock: {
         Rock: 'draw',
@@ -38,12 +41,18 @@ function clicked(input) {
     switch(gameRules[input][comp_choice]) {
         case 'win':
             result.innerText = `You win`;
+            result.style.cssText = "background-color: rgb(128, 247, 128)";
+            user_score++;
             break;
         case 'lose':
             result.innerText = `You lose`;
+            result.style.cssText = "background-color: rgb(240, 124, 124)";
+            comp_score++;
             break;
         case 'lose':
             result.innerText = `You lose`;
             break;   
     }
+    document.getElementById('comp_score').innerHTML = comp_score;
+    document.getElementById('user_score').innerHTML = user_score;
 }
