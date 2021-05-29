@@ -49,8 +49,9 @@ function clicked(input) {
             result.style.cssText = "background-color: rgb(240, 124, 124)";
             comp_score++;
             break;
-        case 'lose':
-            result.innerText = `You lose`;
+        case 'draw':
+            result.innerText = `You draw`;
+            result.style.cssText = "background-color: rgb(102, 102, 102)";
             break;   
     }
     document.getElementById('comp_score').innerHTML = comp_score;
