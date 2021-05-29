@@ -1,0 +1,16 @@
+*,
+*:before,
+*:after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f6f0c4;
+    background-image: linear-gradient(315deg, #f6f0c4 0%, #d99ec9 74%);
+    
+}
