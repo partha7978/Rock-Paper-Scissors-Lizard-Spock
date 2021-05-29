@@ -4,13 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock-paper-sissors</title>
+    <title>Rock-paper-scissors</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="container">
+        <header>
+            <div class="title">
+                <p>Rock</p>
+                <p>Paper</p>
+                <p>Scissors</p>
+
+            </div>
+            <div class="score">
+                <p>Computer: <span id="comp-score">0</span></p>
+                <p>User: <span id="user-score">0</span></p>
+            </div>
+        </header>
+
+        <div class="main-part">
+            <button><i class="far fa-hand-rock"></i></button>
+            <button><i class="far fa-hand-paper"></i></button>
+            <button><i class="far fa-hand-scissors"></i></button>
+        </div>
+        <div class="last-part">
+            <p id="userChoice"></p>
+            <p id="compChoice"></p>
+            <p id="result"></p>
+        </div>
+    </div>
     
 
     <script src="script.js"></script>
