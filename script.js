@@ -77,4 +77,27 @@ function clicked(input) {
     }
     document.getElementById('comp_score').innerHTML = comp_score;
     document.getElementById('user_score').innerHTML = user_score;
+
 }
+
+
+
+
+
+//For image button
+// let button = document.getElementById("buttonClick");
+// let divImage = document.getElementById("clickImage");
+// button.addEventListener("click", function() {
+//     console.log('click');
+//     let img = document.createElement("img");
+
+//     img.className = "imageclass";
+//     img.height = "400";
+//     img.width = "400";
+//     img.src = "https://4.bp.blogspot.com/-UDygmyRud_M/U1mhXYASEwI/AAAAAAAAPsY/DQdK7GNHnOw/s1600/rock%20paper%20scissors%20spock%20lizard%20devil%20love%20rules%20explained%20short%20hand.jpg";        
+//     divImage.appendChild(img);
+
+// })
+
+
+
