@@ -97,11 +97,14 @@ span {
     font-weight: 900;
 }
 
+/* FOR IMAGE BUTTON  */
 
-/* for rules button*/
-/* .rulesButton {
+
+
+ /* for rules button
+ .rulesButton {
     float: right;
-}
+} */
 
 
 
@@ -119,7 +122,7 @@ span {
     letter-spacing: 1px;
     border-radius: 10px;
     display: block;
-    float: right;
+    /* float: right; */
     border: none;
     box-shadow: 1px 1px 2px #838383;
 }
@@ -128,8 +131,14 @@ span {
     background-position: right center; 
     color: rgb(255, 255, 255);
     text-decoration: none;
-} */
+} 
 
-/* popup */
-
+a{
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px;
+}
+a:hover {
+    color: white;
+}
 
