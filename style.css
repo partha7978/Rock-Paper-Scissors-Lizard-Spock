@@ -99,7 +99,7 @@ span {
 
 
 /* for rules button*/
-.rulesButton {
+/* .rulesButton {
     float: right;
 }
 
@@ -125,10 +125,10 @@ span {
 }
 
 .btn-grad:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center; 
     color: rgb(255, 255, 255);
     text-decoration: none;
-}
+} */
 
 /* popup */
 
