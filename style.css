@@ -158,6 +158,7 @@ span {
         width: 4.3rem;
         border-radius: 50%;    
         /* margin: 10px; */
+        margin: 2px;
     }
 
     .last-part {
