@@ -97,6 +97,29 @@ span {
     font-weight: 900;
 }
 
-/* FOR IMAGE BUTTON  */
+/* FOr responsive */
 
+@media only screen and (max-width: 680px) {
+    .container {
+        width: 37%;
+        min-width: 34rem;
+        padding: 3.4rem 2.4rem;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .container {
+        width: 34%;
+        min-width: 31rem;
+        padding: 3.1rem 2.1rem;
+    }
+}
+
+@media only screen and (max-width: 510px) {
+    .container {
+        width: 30%;
+        min-width: 28rem;
+        padding: 2.9rem 1.9rem;
+    }
+}
 
