@@ -101,11 +101,3 @@ function clicked(input) {
 
 
 
-function myFunction(){
-    let s = document.getElementById('sss');
-    if(s.style.display === 'block'){
-      s.style.display = 'none';
-    } else{
-      s.style.display = 'block';
-    }
-  }
