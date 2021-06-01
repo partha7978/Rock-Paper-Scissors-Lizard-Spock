@@ -78,20 +78,21 @@ function clicked(input) {
     document.getElementById('comp_score').innerHTML = comp_score;
     document.getElementById('user_score').innerHTML = user_score;
 
+// For user wins and computer wins
 
-     
+    if(user_score === 10) {
+        alert("You won the match");
+       
+       
+    }
+    else if(comp_score === 10) {
+        alert("Computer won the match");
+    }
 
     
 }
 
-if(user_score === 10) {
-    alert("You won the match");
-   
-   
-}
-else if(comp_score === 10) {
-    alert("Computer won the match");
-}
+
 
 
 
