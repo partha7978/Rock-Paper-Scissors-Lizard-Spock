@@ -87,6 +87,7 @@ function clicked(input) {
     }
     else if(comp_score === 10) {
         alert("Computer won the match");
+        location.reload();
     }
 
     
