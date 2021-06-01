@@ -82,7 +82,7 @@ function clicked(input) {
 
     if(user_score === 10) {
         alert("You won the match");
-       
+        location.reload();
        
     }
     else if(comp_score === 10) {
