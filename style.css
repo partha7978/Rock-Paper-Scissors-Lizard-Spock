@@ -16,6 +16,11 @@ body, html {
 
     font-size: 16px;
 }
+
+.main-header {
+    width: 100%;
+}
+
 .container {
 
     width: 45%;
