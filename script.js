@@ -8,9 +8,9 @@
 //It should update the score.
 
 // starting message
-setTimeout( () => {
-    alert("This is Rock Paper Scissors Lizard Spock game. You can start playing with computer by clicking the icons. ")
-}, 2000);
+// setTimeout( () => {
+//     alert("This is Rock Paper Scissors Lizard Spock game. You can start playing with computer by clicking the icons. ")
+// }, 2000);
 
 const result = document.getElementById("result");
 let [comp_score, user_score] = [0,0];

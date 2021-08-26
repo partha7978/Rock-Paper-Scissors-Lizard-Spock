@@ -1,189 +1,231 @@
 *,
 *:before,
-*:after{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
-body, html {
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    /* background-color: #f9c5d1;
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  /* background-color: #f9c5d1;
     background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%); */
-    background: #ededed;
+  background: #ededed;
 
-    font-size: 16px;
+  font-size: 16px;
 }
 
+/* main header starts */
 .main-header {
-    width: 100%;
+  width: 100%;
 }
+
+.navbar {
+  width: 100%;
+}
+
+.nav-ul {
+  display: flex;
+  width: 100%;
+  list-style: none;
+}
+
+.nav-ul > li {
+  /* width: 50%; */
+
+  margin: 0.5rem 1rem;
+}
+
+.nav-ul > li > button {
+  padding: 0.4rem 0.4rem;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  border-radius: 150px;
+  transition: all 0.5s;
+}
+
+.nav-ul > li > button:hover {
+  background: #e0e0e0;
+  cursor: pointer;
+  box-shadow: 5px 5px 7px #aaaaaa, -5px -5px 7px #ffffff;
+}
+
+.last-li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.last-li {
+  margin-left: auto !important;
+}
+
+.last-li > p {
+  margin: 0rem 0.3rem;
+}
+/* main header ends */
 
 .container {
+  width: 45%;
+  min-width: 40rem;
+  background-color: white;
+  padding: 4rem 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 31px;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 
-    width: 45%;
-    min-width: 40rem;
-    background-color: white;
-    padding: 4rem 3rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 31px;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
-
-    background: #ededed;
-    box-shadow:  28px 28px 35px #b9b9b9,
-    -28px -28px 35px #ffffff;
+  background: #ededed;
+  box-shadow: 28px 28px 35px #b9b9b9, -28px -28px 35px #ffffff;
 }
 /* header  block starts */
 header {
-    min-height: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 4rem;
+  min-height: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4rem;
 }
 
 .title {
-    font-weight: 700;
-    font-size: 1.2rem;
-    line-height: 1.5rem;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  text-transform: uppercase;
 }
 .score p {
-    font-weight: 500;
-    font-size: 1.1rem;
-    line-height: 1.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
 }
 
 /* main part starts (the icon)*/
 .main-part {
-    width: 90%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    /* display: grid;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
-    justify-content: space-around;
-    
+  justify-content: space-around;
 }
-.main-part button{
-    background-color: #a4508b;
-    background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
-    color: white;
-    border: none;
-    font-size: 4rem;
-    height: 6.3rem;
-    width: 6.3rem;
-    border-radius: 50%;    
-    outline: none;
-    cursor: pointer;
-    /* margin: 10px; */
+.main-part button {
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+  color: white;
+  border: none;
+  font-size: 4rem;
+  height: 6.3rem;
+  width: 6.3rem;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  /* margin: 10px; */
 }
-
 
 /* Last part starts here */
 .last-part {
-    margin-top: 3rem;
-    text-align: center;
-
+  margin-top: 3rem;
+  text-align: center;
 }
 #result {
-    width: 15rem;
-    padding: 1rem 0;
-    margin: 2.5rem auto;  
-    /* by giving auto it will automatically come to the center */
-    font-weight: 700;
-    letter-spacing: 0.7px;
-    text-transform: uppercase;
+  width: 15rem;
+  padding: 1rem 0;
+  margin: 2.5rem auto;
+  /* by giving auto it will automatically come to the center */
+  font-weight: 700;
+  letter-spacing: 0.7px;
+  text-transform: uppercase;
 }
 
-#userChoice, #compChoice {
-    font-weight: 400;
-    margin-bottom: 0.5rem;
+#userChoice,
+#compChoice {
+  font-weight: 400;
+  margin-bottom: 0.5rem;
 }
 span {
-    font-weight: 900;
+  font-weight: 900;
 }
 
 /* FOr responsive */
 
 @media only screen and (max-width: 680px) {
-    .container {
-        width: 37%;
-        min-width: 34rem;
-        padding: 3.4rem 2.4rem;
-    }
+  .container {
+    width: 37%;
+    min-width: 34rem;
+    padding: 3.4rem 2.4rem;
+  }
 }
 
 @media only screen and (max-width: 590px) {
-    .container {
-        width: 34%;
-        min-width: 31rem;
-        padding: 3.1rem 2.1rem;
-    }
+  .container {
+    width: 34%;
+    min-width: 31rem;
+    padding: 3.1rem 2.1rem;
+  }
 }
 
 @media only screen and (max-width: 535px) {
-    .container {
-        width: 25%;
-        min-width: 23rem;
-        padding: 2.4rem 1.4rem;
-    }
+  .container {
+    width: 25%;
+    min-width: 23rem;
+    padding: 2.4rem 1.4rem;
+  }
 
-    .main-part button{
-        font-size: 3rem;
-        height: 5.8rem;
-        width: 5.8rem;
-        border-radius: 50%;    
-        /* margin: 10px; */
-    }
+  .main-part button {
+    font-size: 3rem;
+    height: 5.8rem;
+    width: 5.8rem;
+    border-radius: 50%;
+    /* margin: 10px; */
+  }
 
-    .last-part {
-        margin-top: 2rem;        
-    }
+  .last-part {
+    margin-top: 2rem;
+  }
 
-    #result {
-        width: 10rem;
-        padding: 0.7rem 0;
-        margin: 2.1rem auto;  
-        /* by giving auto it will automatically come to the center */
-        font-weight: 700;
-        letter-spacing: 0.5px;
-    }
-    
+  #result {
+    width: 10rem;
+    padding: 0.7rem 0;
+    margin: 2.1rem auto;
+    /* by giving auto it will automatically come to the center */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
 }
 
 @media only screen and (max-width: 395px) {
-    .container {
-        width: 20%;
-        min-width: 18rem;
-        padding: 2rem 1rem;
-    }
+  .container {
+    width: 20%;
+    min-width: 18rem;
+    padding: 2rem 1rem;
+  }
 
-    .main-part button{
-        font-size: 1.8rem;
-        height: 4.3rem;
-        width: 4.3rem;
-        border-radius: 50%;    
-        /* margin: 10px; */
-        margin: 2px;
-    }
+  .main-part button {
+    font-size: 1.8rem;
+    height: 4.3rem;
+    width: 4.3rem;
+    border-radius: 50%;
+    /* margin: 10px; */
+    margin: 2px;
+  }
 
-    .last-part {
-        margin-top: 2rem;        
-    }
+  .last-part {
+    margin-top: 2rem;
+  }
 
-    #result {
-        width: 6rem;
-        padding: 0.5rem 0;
-        margin: 1.8rem auto;  
-        /* by giving auto it will automatically come to the center */
-        font-size: 0.6rem;
-        font-weight: 700;
-        letter-spacing: 0.2px;
-    }
-    
+  #result {
+    width: 6rem;
+    padding: 0.5rem 0;
+    margin: 1.8rem auto;
+    /* by giving auto it will automatically come to the center */
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+  }
 }
