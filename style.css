@@ -39,7 +39,7 @@ html {
   margin: 0.5rem 1rem;
 }
 
-.nav-ul > li > button {
+.nav-ul > li > button, .nav-ul > li > a > button {
   height: 2rem;
   width: 2rem;
   padding: 0.4rem 0.4rem;
@@ -52,7 +52,7 @@ html {
   transition: all 1s;
 }
 
-.nav-ul > li > button:hover {
+.nav-ul > li > button:hover, .nav-ul > li > a > button:hover {
   cursor: pointer;
   background: linear-gradient(145deg, #cacaca, #f0f0f0);
   box-shadow:  5px 5px 10px #a6a6a6,
