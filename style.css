@@ -40,6 +40,8 @@ html {
 }
 
 .nav-ul > li > button {
+  height: 2rem;
+  width: 2rem;
   padding: 0.4rem 0.4rem;
   border: none;
   outline: none;
@@ -128,6 +130,10 @@ header {
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+
+  
+
+
   /* margin: 10px; */
 }
 
@@ -144,6 +150,10 @@ header {
   font-weight: 700;
   letter-spacing: 0.7px;
   text-transform: uppercase;
+
+
+
+  
 }
 
 #userChoice,
