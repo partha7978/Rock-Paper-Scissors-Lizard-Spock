@@ -44,14 +44,17 @@ html {
   border: none;
   outline: none;
   font-size: 1rem;
-  border-radius: 150px;
+  border-radius: 50px;
   transition: all 0.5s;
+  box-shadow: 5px 5px 7px #aaaaaa, -5px -5px 7px #ffffff;
+  transition: all 1s;
 }
 
 .nav-ul > li > button:hover {
-  background: #e0e0e0;
   cursor: pointer;
-  box-shadow: 5px 5px 7px #aaaaaa, -5px -5px 7px #ffffff;
+  background: linear-gradient(145deg, #cacaca, #f0f0f0);
+  box-shadow:  5px 5px 10px #a6a6a6,
+               -5px -5px 10px #ffffff;
 }
 
 .last-li {
@@ -72,7 +75,7 @@ html {
 .container {
   width: 45%;
   min-width: 40rem;
-  background-color: white;
+
   padding: 4rem 3rem;
   position: absolute;
   top: 50%;
