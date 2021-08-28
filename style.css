@@ -14,13 +14,13 @@ html {
   /* background-color: #f9c5d1;
     background-image: linear-gradient(315deg, #f9c5d1 0%, #9795ef 74%); */
   background: #ededed;
-
+  transition: all 1.5s;
   font-size: 16px;
 }
 
 .dark-mode-body {
   background: #363636;
-  transition: all 2s;
+  transition: all 1.5s;
 }
 
 /* main header starts */
@@ -44,6 +44,16 @@ html {
   margin: 0.5rem 1rem;
 }
 
+li > p {
+ transition: all 1.5s;
+}
+
+.p-color {
+  color: #000000;
+}
+.p-color-dark {
+  color: #ffffff;
+}
 .nav-ul > li > button, .nav-ul > li > a > button {
   height: 2rem;
   width: 2rem;
