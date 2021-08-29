@@ -2,6 +2,8 @@ const button = document.querySelector(".dark-mode");
 const p = document.querySelector(".p-text");
 const container = document.querySelector(".container");
 const gameHeading = document.querySelector(".title");
+const score = document.querySelector(".score");
+
 
 
 button.addEventListener("click", () => {
@@ -10,6 +12,7 @@ button.addEventListener("click", () => {
     navBarP();
     mainContainer();
     heading();
+    scoreColor();
 })
 
 const body = () => {
@@ -37,4 +40,9 @@ const mainContainer = () => {
 const heading = () => {
     gameHeading.classList.toggle("title-light");
     gameHeading.classList.toggle("title-dark");
+}
+
+const scoreColor = () => {
+    score.classList.toggle("score-light");
+    score.classList.toggle("score-dark");
 }
