@@ -147,6 +147,13 @@ header {
   font-size: 1.2rem;
   line-height: 1.5rem;
   text-transform: uppercase;
+  transition: all 1.5s;
+}
+.title-light {
+  color: #000000;
+}
+.title-dark {
+  color: rgb(218, 218, 218);
 }
 .score p {
   font-weight: 500;
