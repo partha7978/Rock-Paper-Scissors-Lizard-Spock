@@ -169,6 +169,16 @@ header {
 .score-dark {
   color: rgb(218, 218, 218);
 }
+
+.choosing-part-comp, .choosing-part-user {
+  transition: all 1.5s;
+}
+.p-light {
+  color:#000000;
+}
+.p-dark {
+  color: rgb(218, 218, 218);
+}
 /* main part starts (the icon)*/
 .main-part {
   width: 90%;

@@ -3,8 +3,8 @@ const p = document.querySelector(".p-text");
 const container = document.querySelector(".container");
 const gameHeading = document.querySelector(".title");
 const score = document.querySelector(".score");
-
-
+const choosingPartComp = document.querySelector(".choosing-part-comp");
+const choosingPartUser = document.querySelector(".choosing-part-user");
 
 button.addEventListener("click", () => {
     body();
@@ -13,6 +13,7 @@ button.addEventListener("click", () => {
     mainContainer();
     heading();
     scoreColor();
+    choosingText();
 })
 
 const body = () => {
@@ -45,4 +46,12 @@ const heading = () => {
 const scoreColor = () => {
     score.classList.toggle("score-light");
     score.classList.toggle("score-dark");
+}
+
+const choosingText = () => {
+    choosingPartUser.classList.toggle("p-light");
+    choosingPartUser.classList.toggle("p-dark");
+
+    choosingPartComp.classList.toggle("p-light");
+    choosingPartComp.classList.toggle("p-dark");
 }
