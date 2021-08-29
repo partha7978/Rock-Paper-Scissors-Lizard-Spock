@@ -5,8 +5,10 @@ const gameHeading = document.querySelector(".title");
 const score = document.querySelector(".score");
 const choosingPartComp = document.querySelector(".choosing-part-comp");
 const choosingPartUser = document.querySelector(".choosing-part-user");
+const i = document.querySelector(".fas");
 
 button.addEventListener("click", () => {
+    darkModeIcon();
     body();
     socialButtons();
     navBarP();
@@ -15,6 +17,15 @@ button.addEventListener("click", () => {
     scoreColor();
     choosingText();
 })
+
+const darkModeIcon = () => {
+    let btn = document.querySelector(".dark-mode");
+    btn.classList.toggle("nav-btn-color");
+    btn.classList.toggle("dark-mode-button");
+
+    i.classList.toggle("fa-moon-o");
+    i.classList.toggle("fa-sun");
+}
 
 const body = () => {
     let element = document.body;
