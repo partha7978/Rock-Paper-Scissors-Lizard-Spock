@@ -7,7 +7,10 @@ const choosingPartComp = document.querySelector(".choosing-part-comp");
 const choosingPartUser = document.querySelector(".choosing-part-user");
 const i = document.querySelector(".fas");
 
+
 button.addEventListener("click", () => {
+
+    
     darkModeIcon();
     body();
     socialButtons();
@@ -16,7 +19,21 @@ button.addEventListener("click", () => {
     heading();
     scoreColor();
     choosingText();
+
+    if(document.querySelector('.fa-sun')){
+        console.log('sun detected');
+        p.innerText = "Light Mode";
+     }
+     else
+     {
+         console.log('moon detected');
+         p.innerText = "Dark Mode";
+     }
 })
+
+
+
+
 
 const darkModeIcon = () => {
     let btn = document.querySelector(".dark-mode");
@@ -41,6 +58,7 @@ const socialButtons = () => {
 const navBarP = () => {
     p.classList.toggle("p-color");
     p.classList.toggle("p-color-dark");
+
     
 }
 
@@ -65,4 +83,36 @@ const choosingText = () => {
 
     choosingPartComp.classList.toggle("p-light");
     choosingPartComp.classList.toggle("p-dark");
+}
+
+
+
+//for system theme detection and set the theme according to that
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // window.location.reload(); //for reloding
+
+    
+p.innerText = 'Light Mode';
+ console.log("dark mode detected");   // dark mode
+ darkModeIcon();
+ body();
+ socialButtons();
+ navBarP();
+ mainContainer();
+ heading();
+ scoreColor();
+ choosingText();
+
+    setTimeout(() => {
+        alert("The webpage is in dark mode, You can also try the light mode by clicking on the top right corner icon.")
+    }, 3000);
+    
+}
+else
+{
+    console.log("light mode detected"); // light mode
+    p.innerText = 'Dark Mode';
+    setTimeout(() => {
+        alert("The webpage is in light mode, You can also try the dark mode by clicking on the top right corner icon.")
+    }, 3000);
 }
