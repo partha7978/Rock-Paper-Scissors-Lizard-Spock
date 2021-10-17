@@ -88,31 +88,31 @@ const choosingText = () => {
 
 
 //for system theme detection and set the theme according to that
-// if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-//     // window.location.reload(); //for reloding
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    // window.location.reload(); //for reloding
 
     
-// p.innerText = 'Light Mode';
-//  console.log("dark mode detected");   // dark mode
-//  darkModeIcon();
-//  body();
-//  socialButtons();
-//  navBarP();
-//  mainContainer();
-//  heading();
-//  scoreColor();
-//  choosingText();
+p.innerText = 'Light Mode';
+ console.log("dark mode detected");   // dark mode
+ darkModeIcon();
+ body();
+ socialButtons();
+ navBarP();
+ mainContainer();
+ heading();
+ scoreColor();
+ choosingText();
 
-//     setTimeout(() => {
-//         alert("The webpage is in dark mode, You can also try the light mode by clicking on the top right corner icon.")
-//     }, 3000);
+    setTimeout(() => {
+        alert("The webpage is in dark mode, You can also try the light mode by clicking on the top right corner icon.")
+    }, 3000);
     
-// }
-// else
-// {
-//     console.log("light mode detected"); // light mode
-//     p.innerText = 'Dark Mode';
-//     setTimeout(() => {
-//         alert("The webpage is in light mode, You can also try the dark mode by clicking on the top right corner icon.")
-//     }, 3000);
-// }
+}
+else
+{
+    console.log("light mode detected"); // light mode
+    p.innerText = 'Dark Mode';
+    setTimeout(() => {
+        alert("The webpage is in light mode, You can also try the dark mode by clicking on the top right corner icon.")
+    }, 3000);
+}
