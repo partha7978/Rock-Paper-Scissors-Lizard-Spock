@@ -36,6 +36,11 @@
   font-size: 1.2rem;
   letter-spacing: 3px;
 }
+.modal-content p span {
+ background-image: linear-gradient(to right, #a4508b, #5f0a87);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
 
 /* The Close Button */
 .close {

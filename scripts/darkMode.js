@@ -102,7 +102,6 @@ p.innerText = 'Light Mode';
  heading();
  scoreColor();
  choosingText();
-
 }
 else
 {
