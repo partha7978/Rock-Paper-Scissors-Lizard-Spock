@@ -21,6 +21,7 @@ html {
 .dark-mode-body {
   background: #363636;
   transition: all 1.5s;
+  color: #fff;
 }
 
 /* main header starts */

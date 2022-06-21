@@ -7,7 +7,6 @@ const choosingPartComp = document.querySelector(".choosing-part-comp");
 const choosingPartUser = document.querySelector(".choosing-part-user");
 const i = document.querySelector(".fas");
 
-
 button.addEventListener("click", () => {
 
     
@@ -94,6 +93,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     
 p.innerText = 'Light Mode';
  console.log("dark mode detected");   // dark mode
+ 
  darkModeIcon();
  body();
  socialButtons();
@@ -103,16 +103,10 @@ p.innerText = 'Light Mode';
  scoreColor();
  choosingText();
 
-    setTimeout(() => {
-        alert("The webpage is in dark mode, You can also try the light mode by clicking on the top right corner icon.")
-    }, 3000);
-    
 }
 else
 {
     console.log("light mode detected"); // light mode
     p.innerText = 'Dark Mode';
-    setTimeout(() => {
-        alert("The webpage is in light mode, You can also try the dark mode by clicking on the top right corner icon.")
-    }, 3000);
+  
 }

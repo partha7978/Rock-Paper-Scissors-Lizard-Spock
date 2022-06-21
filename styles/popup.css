@@ -1,5 +1,5 @@
 :root {
-  --shadowSupport: 0px 20px 20px 0px rgb(111 35 147 / 30%);
+  --shadowSupport: 0px 20px 20px 0px rgb(26 26 26 / 30%);
 }
 
 /* !testing */
@@ -51,7 +51,8 @@
   transition: all 0.3s ease;
   cursor: pointer;
   display: inline-block;
-  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);;
+  background-color: #000;
+  border: 1px solid #fff;
 }
 
 .close:hover,
@@ -70,4 +71,9 @@
   .modal-content {
     width: 85%;
   }
+}
+
+.darkModePopup {
+  background-color: #000000;
+  color: #ffffff;
 }
