@@ -97,7 +97,9 @@ li > p {
                -5px -5px 11px #484848;
 }
 
-
+/* ion-icon {
+  background-color: #fff;
+} */
 
 .last-li {
   display: flex;
