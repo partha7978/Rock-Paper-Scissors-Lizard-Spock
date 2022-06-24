@@ -63,11 +63,18 @@ li > p {
   outline: none;
   font-size: 1rem;
   border-radius: 50px;
-  transition: all 1.5s;
+  transition: all 0.5s;
 }
-
-.dark-mode:hover {
-  transform: rotate(40deg);
+.dark-mode {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-btn > .nav-icon {
+  font-size: 1.1rem;
+}
+.nav-btn:hover {
+  transform: rotate(20deg);
 }
 .nav-ul > li > button:hover, .nav-ul > li > a > button:hover {
   cursor: pointer;
