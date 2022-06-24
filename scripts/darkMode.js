@@ -5,7 +5,7 @@ const gameHeading = document.querySelector(".title");
 const score = document.querySelector(".score");
 const choosingPartComp = document.querySelector(".choosing-part-comp");
 const choosingPartUser = document.querySelector(".choosing-part-user");
-const i = document.querySelector(".fas");
+const i = document.querySelector(".icon");
 
 button.addEventListener("click", () => {
 
@@ -19,7 +19,7 @@ button.addEventListener("click", () => {
     scoreColor();
     choosingText();
 
-    if(document.querySelector('.fa-sun')){
+    if(document.querySelector('.dark-mode-body')){
         console.log('sun detected');
         p.innerText = "Light Mode";
      }
@@ -39,8 +39,16 @@ const darkModeIcon = () => {
     btn.classList.toggle("nav-btn-color");
     btn.classList.toggle("dark-mode-button");
 
-    i.classList.toggle("fa-moon-o");
-    i.classList.toggle("fa-sun");
+    // i.classList.toggle("fa-moon-o");
+    if(document.querySelector(".dark-mode-body")) {
+        console.log("Theme working to convert to light mode")
+        i.setAttribute("name", "moon");
+    }
+    else if(!(document.querySelector(".dark-mode-body")))
+    {
+        console.log("Theme working to convert to dark mode")
+        i.setAttribute("name", "sunny");
+    }
 }
 
 const body = () => {
