@@ -12,6 +12,47 @@
 //     alert("This is Rock Paper Scissors Lizard Spock game. You can start playing with computer by clicking the icons. ")
 // }, 2000);
 
+
+// !For general popup content
+let generalPopup = document.getElementById("generalPopup");
+let generalPopupContent = generalPopup.querySelector(".popup-content-general");
+let closeBtnGeneral = document.querySelector(".general-close-btn");
+let blankDiv = document.querySelector(".blank-div");
+let generalDiv = document.querySelector(".general-div");
+
+const generalPopupFunforLight = () => {
+    console.log("generalPopupFunforLight added");
+    setTimeout(() => {
+      generalPopup.style.display = "block";
+      generalPopupContent.classList.add("animate__animated", "animate__fadeInUp"); //!   adding fade in animation when it appears
+    }, 500);
+  
+    closeBtnGeneral.addEventListener("click", () => {
+      generalPopupContent.classList.add(
+        "animate__animated",
+        "animate__fadeOutDown"
+      );
+      setTimeout(() => {
+        generalPopup.style.display = "none";
+        location.reload();
+      }, 600);
+    });
+    window.onclick = function (e) {
+      if (e.target == blankDiv || e.target == generalDiv) {
+        generalPopupContent.classList.add(
+          "animate__animated",
+          "animate__fadeOutDown"
+        );
+        setTimeout(() => {
+          generalPopup.style.display = "none";
+          location.reload();
+        }, 600);
+      }
+    };
+  };
+
+//!for general popup ends
+
 const result = document.getElementById("result");
 let [comp_score, user_score] = [0,0];
 
@@ -86,16 +127,15 @@ function clicked(input) {
 // For user wins and computer wins
 
     if(user_score === 10) {
-        alert("You won the match");
-        location.reload();
+       generalPopupFunforLight();
+       
        
     }
     else if(comp_score === 10) {
-        alert("Computer won the match");
-        location.reload();
+          generalPopupFunforLight();
+       
     }  
 }
-
 
 
 
