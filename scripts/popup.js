@@ -35,7 +35,7 @@ const openDarkPopup = () => {
     let popupText = document.querySelector(".popupText");
     popupText.innerHTML = "The webpage is in <span>dark mode</span>, You can also try the <span>light mode</span> by clicking on the top right corner icon.";
   }
-  openLightPopup();
+  openLightPopup();s
 
 }
 
