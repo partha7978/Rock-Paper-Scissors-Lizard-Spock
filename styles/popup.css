@@ -79,10 +79,7 @@
   }
 }
 
-.darkModePopup {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
+
 
 
 /*! generaal popup starts */
@@ -143,3 +140,12 @@
 
 /*! generaal popup ends */
 
+/* !for dark mode */
+.darkModePopup {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+.dark-mode-btn {
+  background-color: #ffffff;
+  color: #000000;
+}

@@ -13,45 +13,6 @@
 // }, 2000);
 
 
-// !For general popup content
-let generalPopup = document.getElementById("generalPopup");
-let generalPopupContent = generalPopup.querySelector(".popup-content-general");
-let closeBtnGeneral = document.querySelector(".general-close-btn");
-let blankDiv = document.querySelector(".blank-div");
-let generalDiv = document.querySelector(".general-div");
-
-const generalPopupFunforLight = () => {
-    console.log("generalPopupFunforLight added");
-    setTimeout(() => {
-      generalPopup.style.display = "block";
-      generalPopupContent.classList.add("animate__animated", "animate__fadeInUp"); //!   adding fade in animation when it appears
-    }, 500);
-  
-    closeBtnGeneral.addEventListener("click", () => {
-      generalPopupContent.classList.add(
-        "animate__animated",
-        "animate__fadeOutDown"
-      );
-      setTimeout(() => {
-        generalPopup.style.display = "none";
-        location.reload();
-      }, 600);
-    });
-    window.onclick = function (e) {
-      if (e.target == blankDiv || e.target == generalDiv) {
-        generalPopupContent.classList.add(
-          "animate__animated",
-          "animate__fadeOutDown"
-        );
-        setTimeout(() => {
-          generalPopup.style.display = "none";
-          location.reload();
-        }, 600);
-      }
-    };
-  };
-
-//!for general popup ends
 
 const result = document.getElementById("result");
 let [comp_score, user_score] = [0,0];
@@ -124,15 +85,15 @@ function clicked(input) {
     document.getElementById('comp_score').innerHTML = comp_score;
     document.getElementById('user_score').innerHTML = user_score;
 
-// For user wins and computer wins
-
+//todo:  For user wins and computer wins
+      
     if(user_score === 10) {
-       generalPopupFunforLight();
+      checkTheme();
        
        
     }
     else if(comp_score === 10) {
-          generalPopupFunforLight();
+      checkTheme();
        
     }  
 }
@@ -140,20 +101,69 @@ function clicked(input) {
 
 
 
-//For image button
-// let button = document.getElementById("buttonClick");
-// let divImage = document.getElementById("clickImage");
-// button.addEventListener("click", function() {
-//     console.log('click');
-//     let img = document.createElement("img");
+// !For general popup content
+let generalPopup = document.getElementById("generalPopup");
+let generalPopupContent = generalPopup.querySelector(".popup-content-general");
+let closeBtnGeneral = document.querySelector(".general-close-btn");
+let blankDiv = document.querySelector(".blank-div");
+let generalDiv = document.querySelector(".general-div");
 
-//     img.className = "imageclass";
-//     img.height = "400";
-//     img.width = "400";
-//     img.src = "https://4.bp.blogspot.com/-UDygmyRud_M/U1mhXYASEwI/AAAAAAAAPsY/DQdK7GNHnOw/s1600/rock%20paper%20scissors%20spock%20lizard%20devil%20love%20rules%20explained%20short%20hand.jpg";        
-//     divImage.appendChild(img);
+const generalPopupForLight = () => {
+    console.log("generalPopupFunforLight added");
+    setTimeout(() => {
+      generalPopup.style.display = "block";
+      generalPopupContent.classList.add("animate__animated", "animate__fadeInUp"); //!   adding fade in animation when it appears
+    }, 500);
+  
+    closeBtnGeneral.addEventListener("click", () => {
+      generalPopupContent.classList.add(
+        "animate__animated",
+        "animate__fadeOutDown"
+      );
+      setTimeout(() => {
+        generalPopup.style.display = "none";
+        location.reload();
+      }, 600);
+    });
+    window.onclick = function (e) {
+      if (e.target == blankDiv || e.target == generalDiv) {
+        generalPopupContent.classList.add(
+          "animate__animated",
+          "animate__fadeOutDown"
+        );
+        setTimeout(() => {
+          generalPopup.style.display = "none";
+          location.reload();
+        }, 600);
+      }
+    };
+  };
 
-// })
+  const generalPopupForDark = () => {
+    generalPopupForLight();
+    console.log("general dark mode popup added");
+    generalPopupContent.classList.toggle("darkModePopup");
+    if(document.querySelector(".darkModePopup")) {
+      document.querySelector(".general-close-btn").classList.add("dark-mode-btn");
+    }
+  }
+
+  const checkTheme = () => {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      // window.location.reload(); //for reloding
+      generalPopupForDark();
+    }
+    else{
+      
+      generalPopupForLight();
+      // openLightPopup();
+    }
+
+  }
+
+
+
+//!for general popup ends
 
 
 
