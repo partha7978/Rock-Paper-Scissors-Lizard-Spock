@@ -116,7 +116,7 @@
   padding: 20px;
   border: 1px solid #888;
   font-size: 1.1rem;
-  width: 45%;
+  width: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -135,6 +135,26 @@
   margin-top: 1rem;
   font-size: 1.2rem;
   letter-spacing: 3px;
+}
+@media only screen and (max-width:1450px) {
+  .popup-content-general {
+    width: 40%;
+  }
+}
+@media only screen and (max-width:1000px) {
+  .popup-content-general {
+    width: 50%;
+  }
+}
+@media only screen and (max-width:700px) {
+  .popup-content-general {
+    width: 80%;
+  }
+}
+@media only screen and (max-width:450px) {
+  .popup-content-general {
+    width: 90%;
+  }
 }
 
 
