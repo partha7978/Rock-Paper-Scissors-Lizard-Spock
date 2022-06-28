@@ -94,7 +94,7 @@ function clicked(input) {
     }
     else if(comp_score === 10) {
       checkTheme();
-       
+       document.querySelector(".genral-popup-text").innerHTML = `Computer <span>Won</span> the match😐`;
     }  
 }
 
