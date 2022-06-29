@@ -149,7 +149,7 @@ const generalPopupForLight = () => {
   }
 
   const checkTheme = () => {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    if (document.querySelector('.dark-mode-body')) {
       // window.location.reload(); //for reloding
       generalPopupForDark();
     }
