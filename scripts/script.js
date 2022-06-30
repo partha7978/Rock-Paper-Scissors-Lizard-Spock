@@ -84,7 +84,7 @@ function clicked(input) {
     }
     document.getElementById('comp_score').innerHTML = comp_score;
     document.getElementById('user_score').innerHTML = user_score;
-
+ 
 //todo:  For user wins and computer wins
       
     if(user_score === 10) {
@@ -99,59 +99,10 @@ function clicked(input) {
 }
 
 
-
-
-// !For general popup content
-let generalPopup = document.getElementById("generalPopup");
-let generalPopupContent = generalPopup.querySelector(".popup-content-general");
-let closeBtnGeneral = document.querySelector(".general-close-btn");
-let blankDiv = document.querySelector(".blank-div");
-let generalDiv = document.querySelector(".general-div");
-
-const generalPopupForLight = () => {
-    console.log("generalPopupFunforLight added");
-    setTimeout(() => {
-      generalPopup.style.display = "block";
-      generalPopupContent.classList.add("animate__animated", "animate__fadeInUp"); //!   adding fade in animation when it appears
-    }, 500);
-  
-    closeBtnGeneral.addEventListener("click", () => {
-      generalPopupContent.classList.add(
-        "animate__animated",
-        "animate__fadeOutDown"
-      );
-      setTimeout(() => {
-        generalPopup.style.display = "none";
-        location.reload();
-      }, 600);
-    });
-    window.onclick = function (e) {
-      if (e.target == blankDiv || e.target == generalDiv) {
-        generalPopupContent.classList.add(
-          "animate__animated",
-          "animate__fadeOutDown"
-        );
-        setTimeout(() => {
-          generalPopup.style.display = "none";
-          location.reload();
-        }, 600);
-      }
-    };
-  };
-
-  const generalPopupForDark = () => {
-    generalPopupForLight();
-    console.log("general dark mode popup added");
-    generalPopupContent.classList.toggle("darkModePopup");
-    if(document.querySelector(".darkModePopup")) {
-      document.querySelector(".general-close-btn").classList.add("dark-mode-btn");
-    }
-  }
-
   const checkTheme = () => {
     if (document.querySelector('.dark-mode-body')) {
       // window.location.reload(); //for reloding
-      generalPopupForDark();
+      generalPopupForDark();  //*this function is in popup.css file
     }
     else{
       
@@ -167,3 +118,8 @@ const generalPopupForLight = () => {
 
 
 
+// ! implementing local storage
+localStorage.setItem('userInputValue', user_score);
+localStorage.setItem('compInputValue', comp_score);
+
+console.log(localStorage.getItem('userInputValue'), localStorage.getItem('compInputValue'));

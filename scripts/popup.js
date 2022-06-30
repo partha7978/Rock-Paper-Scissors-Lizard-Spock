@@ -51,3 +51,55 @@ else{
 
   openLightPopup();
 }
+
+
+
+
+
+
+// !For general popup content
+let generalPopup = document.getElementById("generalPopup");
+let generalPopupContent = generalPopup.querySelector(".popup-content-general");
+let closeBtnGeneral = document.querySelector(".general-close-btn");
+let blankDiv = document.querySelector(".blank-div");
+let generalDiv = document.querySelector(".general-div");
+
+const generalPopupForLight = () => {
+    console.log("generalPopupFunforLight added");
+    setTimeout(() => {
+      generalPopup.style.display = "block";
+      generalPopupContent.classList.add("animate__animated", "animate__fadeInUp"); //!   adding fade in animation when it appears
+    }, 500);
+  
+    closeBtnGeneral.addEventListener("click", () => {
+      generalPopupContent.classList.add(
+        "animate__animated",
+        "animate__fadeOutDown"
+      );
+      setTimeout(() => {
+        generalPopup.style.display = "none";
+        location.reload();
+      }, 600);
+    });
+    window.onclick = function (e) {
+      if (e.target == blankDiv || e.target == generalDiv) {
+        generalPopupContent.classList.add(
+          "animate__animated",
+          "animate__fadeOutDown"
+        );
+        setTimeout(() => {
+          generalPopup.style.display = "none";
+          location.reload();
+        }, 600);
+      }
+    };
+  };
+
+  const generalPopupForDark = () => {
+    generalPopupForLight();
+    console.log("general dark mode popup added");
+    generalPopupContent.classList.toggle("darkModePopup");
+    if(document.querySelector(".darkModePopup")) {
+      document.querySelector(".general-close-btn").classList.add("dark-mode-btn");
+    }
+  }
