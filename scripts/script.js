@@ -82,8 +82,14 @@ function clicked(input) {
             result.style.cssText = "background-color: rgb(102, 102, 102)";
             break;   
     }
-    document.getElementById('comp_score').innerHTML = comp_score;
-    document.getElementById('user_score').innerHTML = user_score;
+    
+    localStorage.setItem('userInputValue', JSON.stringify(user_score));
+    localStorage.setItem('compInputValue', JSON.stringify(comp_score));
+    
+    document.getElementById('comp_score').innerHTML = localStorage.getItem('compInputValue');
+    document.getElementById('user_score').innerHTML = localStorage.getItem('userInputValue');
+    console.log(localStorage.getItem('userInputValue'), localStorage.getItem('compInputValue'));
+
  
 //todo:  For user wins and computer wins
       
@@ -119,7 +125,12 @@ function clicked(input) {
 
 
 // ! implementing local storage
-localStorage.setItem('userInputValue', user_score);
-localStorage.setItem('compInputValue', comp_score);
+// localStorage.setItem('userInputValue', JSON.stringify(user_score));
+// localStorage.setItem('compInputValue', comp_score);
 
-console.log(localStorage.getItem('userInputValue'), localStorage.getItem('compInputValue'));
+// console.log(localStorage.getItem('userInputValue'), localStorage.getItem('compInputValue'));
+
+
+if(!localStorage.getItem('userInputValue')){
+  $window.localStorage.setItem('userInputValue', JSON.stringify($scope.userInputValue));
+}
