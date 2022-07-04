@@ -76,9 +76,11 @@ const generalPopupForLight = () => {
         "animate__animated",
         "animate__fadeOutDown"
       );
+      setDataAfterWinning();
+     
       setTimeout(() => {
         generalPopup.style.display = "none";
-        location.reload();
+     
       }, 600);
     });
     window.onclick = function (e) {
@@ -87,9 +89,10 @@ const generalPopupForLight = () => {
           "animate__animated",
           "animate__fadeOutDown"
         );
+        setDataAfterWinning();
         setTimeout(() => {
           generalPopup.style.display = "none";
-          location.reload();
+          // location.reload();
         }, 600);
       }
     };
@@ -102,4 +105,12 @@ const generalPopupForLight = () => {
     if(document.querySelector(".darkModePopup")) {
       document.querySelector(".general-close-btn").classList.add("dark-mode-btn");
     }
+  }
+
+
+  const setDataAfterWinning = () => {
+    localStorage.setItem('resetUserValue', JSON.stringify(0));
+    localStorage.setItem('resetCompValue', JSON.stringify(0));
+    document.getElementById('comp_score').innerHTML = localStorage.getItem('resetCompValue');
+    document.getElementById('user_score').innerHTML = localStorage.getItem('resetUserValue');
   }
