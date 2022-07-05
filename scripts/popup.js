@@ -77,12 +77,11 @@ const generalPopupForLight = () => {
         "animate__fadeOutDown"
       );
       setDataAfterWinning();
-     
       setTimeout(() => {
         generalPopup.style.display = "none";
-     
       }, 600);
     });
+    
     window.onclick = function (e) {
       if (e.target == blankDiv || e.target == generalDiv) {
         generalPopupContent.classList.add(
@@ -109,8 +108,10 @@ const generalPopupForLight = () => {
 
 
   const setDataAfterWinning = () => {
-    localStorage.setItem('resetUserValue', JSON.stringify(0));
-    localStorage.setItem('resetCompValue', JSON.stringify(0));
+    user_score = 0;
+    comp_score = 0;
+    localStorage.setItem('resetUserValue', JSON.stringify(user_score));
+    localStorage.setItem('resetCompValue', JSON.stringify(comp_score));
     document.getElementById('comp_score').innerHTML = localStorage.getItem('resetCompValue');
     document.getElementById('user_score').innerHTML = localStorage.getItem('resetUserValue');
   }
