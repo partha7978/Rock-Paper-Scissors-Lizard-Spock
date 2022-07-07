@@ -11,7 +11,6 @@ button.addEventListener("click", () => {
 
     
     darkModeIcon();
-    themeIconDarkMode();
     body();
     socialButtons();
     navBarP();
@@ -34,12 +33,12 @@ button.addEventListener("click", () => {
 
 
 
-const themeIconDarkMode = () => {
+
+const darkModeIcon = () => {
     let btn = document.querySelector(".dark-mode");
     btn.classList.toggle("nav-btn-color");
     btn.classList.toggle("dark-mode-button");
-}
-const darkModeIcon = () => {
+
     // i.classList.toggle("fa-moon-o");
     if(document.querySelector(".dark-mode-body")) {
         console.log("Theme working to convert to light mode")
@@ -114,7 +113,7 @@ p.innerText = 'Light Mode';
 
 }
 else
-{
+{   
     i.setAttribute("name", "moon");
     console.log("light mode detected"); // light mode
     p.innerText = 'Dark Mode';
@@ -125,11 +124,11 @@ else
 
 //?Storing the function to the local storage so that everytime reload happens it will not show the 
 //? theme popup again and again. 
-// const setLocalStorageTheme = () => {
-//     // localStorage.setItem('body', body.toString());
-
-//     localStorage.setItem('themeText', p.innerText)
-//     console.log(localStorage.getItem('themeText'));
-//     p.innerText = localStorage.getItem('themeText');
-// }
-// setLocalStorageTheme();
+const setLocalStorageTheme = () => {
+    localStorage.setItem('body', body.toString());
+    localStorage.setItem('socialButtons', socialButtons.toString());
+    localStorage.getItem('body');
+    localStorage.getItem('socialButtons');
+    console.log(localStorage.getItem('body'));
+}
+setLocalStorageTheme();
