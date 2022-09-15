@@ -119,16 +119,3 @@ else
     p.innerText = 'Dark Mode';
   
 }
-
-
-
-//?Storing the function to the local storage so that everytime reload happens it will not show the 
-//? theme popup again and again. 
-const setLocalStorageTheme = () => {
-    localStorage.setItem('body', body.toString());
-    localStorage.setItem('socialButtons', socialButtons.toString());
-    localStorage.getItem('body');
-    localStorage.getItem('socialButtons');
-    console.log(localStorage.getItem('body'));
-}
-setLocalStorageTheme();

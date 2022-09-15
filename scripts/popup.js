@@ -115,3 +115,15 @@ const generalPopupForLight = () => {
     document.getElementById('comp_score').innerHTML = localStorage.getItem('resetCompValue');
     document.getElementById('user_score').innerHTML = localStorage.getItem('resetUserValue');
   }
+
+
+  
+
+
+//?Storing the function to the local storage so that everytime reload happens it will not show the 
+//? theme popup again and again. 
+// const setLocalStorageTheme = () => {
+//   localStorage.setItem('theme', JSON.stringify('none'));
+//   modal.classList.add = localStorage.getItem('theme');
+// }
+// setLocalStorageTheme();
